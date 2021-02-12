@@ -1,0 +1,6 @@
+framework module Pods_BitPandaTest {
+  umbrella header "Pods-BitPandaTest-umbrella.h"
+
+  export *
+  module * { export * }
+}

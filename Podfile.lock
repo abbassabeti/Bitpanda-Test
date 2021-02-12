@@ -1,0 +1,32 @@
+PODS:
+  - Floaty (4.2.0)
+  - Kingfisher (6.1.0)
+  - Pageboy (3.6.2)
+  - PocketSVG (2.7.0)
+  - Tabman (2.10.0):
+    - Pageboy (~> 3.6.0)
+
+DEPENDENCIES:
+  - Floaty
+  - Kingfisher
+  - PocketSVG
+  - Tabman
+
+SPEC REPOS:
+  trunk:
+    - Floaty
+    - Kingfisher
+    - Pageboy
+    - PocketSVG
+    - Tabman
+
+SPEC CHECKSUMS:
+  Floaty: e2bd5a0f6f7f70899e26ff2da31081c8bee8d1b0
+  Kingfisher: f5d8d60a0ef3edd642fd781bae60918599901aff
+  Pageboy: cf121b9dd48c63f3f281b2a9ec93d02e0f23879b
+  PocketSVG: 5e0ff20c8a661586b2f2c295cd18b3e8f06de552
+  Tabman: d8d6ab0b483c7db375a71ac227d3ef791b56a049
+
+PODFILE CHECKSUM: b746aeb90192bfc23648e27efa5694a3d8387815
+
+COCOAPODS: 1.10.1
