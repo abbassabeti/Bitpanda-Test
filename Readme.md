@@ -2,15 +2,17 @@
 
 This is a take-home challenge written by Abbas SabetiNezhad. There is a hard corded data as a .json file in the source and all interpreted data comes from there. To Find out more, read on.
 
-![screenshot1](https://github.com/abbassabeti/Bitpanda-Test/blob/master/images/scr01.gif " ")
+![screenshot1](https://github.com/abbassabeti/Bitpanda-Test/blob/images/images/scr01.gif " ")
 
 ## Depedencies
 
 This App uses:
+
         - ![Tabman](https://github.com/uias/Tabman) : for showing two different screens on tabs
         - ![Floaty](https://github.com/kciter/Floaty) : for adding a floating action button with filters functionality
         - ![Kingfisher](https://github.com/onevcat/Kingfisher) : for loading images from urls
         - ![PocketSVG](https://github.com/pocketsvg/PocketSVG) : for processor of downloaded SVGs
+        
 To find out more about how to run the app, see Installation instructions below.
 
 ## Installation
