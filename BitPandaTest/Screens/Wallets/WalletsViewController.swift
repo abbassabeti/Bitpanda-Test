@@ -18,6 +18,11 @@ class WalletsViewController : UIViewController {
         setupView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tableView?.reloadData()
+    }
+    
     func setupView(){
         configTableView()
         setupFloaty()
@@ -32,30 +37,40 @@ class WalletsViewController : UIViewController {
         let floaty = Floaty()
         floaty.addItem("Wallets",icon: UIImage(named:"coin")) {[weak self] (_) in
             guard let self = self else {return}
+            guard self.viewModel?.type != .Wallet else {return}
             self.viewModel?.type = .Wallet
+            floaty.buttonImage = UIImage(named: "coin")?.badgeIt()
             self.reloadTableView()
         }
         floaty.addItem("Commodity Wallets",icon: UIImage(named:"commodity")) {[weak self] (_) in
             guard let self = self else {return}
+            guard self.viewModel?.type != .CommodityWallet else {return}
             self.viewModel?.type = .CommodityWallet
+            floaty.buttonImage = UIImage(named: "commodity")?.badgeIt()
             self.reloadTableView()
         }
         floaty.addItem("Fiat Wallets",icon: UIImage(named:"fiat")) {[weak self] (_) in
             guard let self = self else {return}
+            guard self.viewModel?.type != .FiatWallet else {return}
             self.viewModel?.type = .FiatWallet
+            floaty.buttonImage = UIImage(named: "fiat")?.badgeIt()
             self.reloadTableView()
         }
-        floaty.addItem(title: "All") {[weak self] (_) in
+        floaty.addItem("Show All",icon: UIImage(named:"clear")) {[weak self] (_) in
             guard let self = self else {return}
+            guard self.viewModel?.type != .All else {return}
             self.viewModel?.type = .All
+            floaty.buttonImage = UIImage(named: "filter")?.badgeIt()
             self.reloadTableView()
         }
         floaty.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(floaty)
+        floaty.buttonImage = UIImage(named: "filter")?.badgeIt()
+        floaty.rotationDegrees = 20
         self.floatyView = floaty
         NSLayoutConstraint.activate([
-            floaty.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -20),
-            floaty.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -20),
+            floaty.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -40),
+            floaty.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -40),
             floaty.widthAnchor.constraint(equalToConstant: 45),
             floaty.heightAnchor.constraint(equalToConstant: 45)
         ])

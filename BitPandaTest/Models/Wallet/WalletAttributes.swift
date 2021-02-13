@@ -40,3 +40,15 @@ struct WalletAttributes: Codable {
         deleted = try values.decodeIfPresent(Bool.self, forKey: .deleted)
     }
 }
+
+
+extension WalletAttributes : Equatable {
+    static func == (lhs: WalletAttributes, rhs: WalletAttributes) -> Bool {
+        return lhs.cryptocoinID == rhs.cryptocoinID &&
+            lhs.cryptocoinSymbol == rhs.cryptocoinSymbol &&
+            lhs.balance == rhs.balance &&
+            lhs.name == rhs.name &&
+            lhs.pendingTransactionsCount == rhs.pendingTransactionsCount &&
+            lhs.deleted == rhs.deleted
+    }
+}

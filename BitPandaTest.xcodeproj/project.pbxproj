@@ -26,6 +26,9 @@
 		0517A44925D554100012482D /* MasterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0517A44825D554100012482D /* MasterData.swift */; };
 		0517A44D25D555BC0012482D /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0517A44C25D555BC0012482D /* MainCoordinator.swift */; };
 		0517A45125D5571F0012482D /* WalletViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0517A45025D5571F0012482D /* WalletViewModel.swift */; };
+		0531F15525D85CDC00D571B9 /* UIImage+Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0531F15425D85CDC00D571B9 /* UIImage+Badge.swift */; };
+		0531F16825D86F0000D571B9 /* SampleDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0531F16725D86F0000D571B9 /* SampleDataTests.swift */; };
+		0531F16C25D86F0A00D571B9 /* CoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0531F16B25D86F0A00D571B9 /* CoordinatorTests.swift */; };
 		056A0F7025D7BEA000303D30 /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 056A0F6F25D7BEA000303D30 /* Readme.md */; };
 		059C6FC925D56924008EBD6B /* WalletsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059C6FC825D56924008EBD6B /* WalletsViewController.swift */; };
 		059C6FD025D586C3008EBD6B /* AssetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059C6FCF25D586C3008EBD6B /* AssetCell.swift */; };
@@ -40,6 +43,16 @@
 		05F2986625D7ABEE0049226B /* Locale+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F2986525D7ABEE0049226B /* Locale+Extension.swift */; };
 		F8FD8FF7FA0C0335E0765985 /* Pods_BitPandaTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ED9AD5ABA33D1256768131E /* Pods_BitPandaTest.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0531F16025D86ED400D571B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0517A40425D549000012482D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0517A40B25D549000012482D;
+			remoteInfo = BitPandaTest;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		050303E925D6CC0C008691E0 /* LogoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoItem.swift; sourceTree = "<group>"; };
@@ -63,6 +76,11 @@
 		0517A44825D554100012482D /* MasterData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterData.swift; sourceTree = "<group>"; };
 		0517A44C25D555BC0012482D /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		0517A45025D5571F0012482D /* WalletViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewModel.swift; sourceTree = "<group>"; };
+		0531F15425D85CDC00D571B9 /* UIImage+Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Badge.swift"; sourceTree = "<group>"; };
+		0531F15B25D86ED300D571B9 /* BitPandaUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BitPandaUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0531F15F25D86ED400D571B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0531F16725D86F0000D571B9 /* SampleDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleDataTests.swift; sourceTree = "<group>"; };
+		0531F16B25D86F0A00D571B9 /* CoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorTests.swift; sourceTree = "<group>"; };
 		056A0F6F25D7BEA000303D30 /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
 		059C6FC825D56924008EBD6B /* WalletsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletsViewController.swift; sourceTree = "<group>"; };
 		059C6FCF25D586C3008EBD6B /* AssetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetCell.swift; sourceTree = "<group>"; };
@@ -86,6 +104,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8FD8FF7FA0C0335E0765985 /* Pods_BitPandaTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0531F15825D86ED300D571B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,6 +147,7 @@
 			children = (
 				056A0F6F25D7BEA000303D30 /* Readme.md */,
 				0517A40E25D549000012482D /* BitPandaTest */,
+				0531F15C25D86ED400D571B9 /* BitPandaUnitTests */,
 				0517A40D25D549000012482D /* Products */,
 				1DC39A155FCF7428D83DC53A /* Pods */,
 				E995E6F6F18ADC7E5406E475 /* Frameworks */,
@@ -132,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				0517A40C25D549000012482D /* BitPandaTest.app */,
+				0531F15B25D86ED300D571B9 /* BitPandaUnitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -203,6 +230,16 @@
 			path = Wallets;
 			sourceTree = "<group>";
 		};
+		0531F15C25D86ED400D571B9 /* BitPandaUnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				0531F15F25D86ED400D571B9 /* Info.plist */,
+				0531F16725D86F0000D571B9 /* SampleDataTests.swift */,
+				0531F16B25D86F0A00D571B9 /* CoordinatorTests.swift */,
+			);
+			path = BitPandaUnitTests;
+			sourceTree = "<group>";
+		};
 		059C6FCE25D584DA008EBD6B /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -217,6 +254,7 @@
 				059C6FE225D692E6008EBD6B /* SVGProcessor.swift */,
 				059C6FEE25D6A53C008EBD6B /* SVGCacheSerializer.swift */,
 				05F2986525D7ABEE0049226B /* Locale+Extension.swift */,
+				0531F15425D85CDC00D571B9 /* UIImage+Badge.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -268,6 +306,24 @@
 			productReference = 0517A40C25D549000012482D /* BitPandaTest.app */;
 			productType = "com.apple.product-type.application";
 		};
+		0531F15A25D86ED300D571B9 /* BitPandaUnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0531F16225D86ED400D571B9 /* Build configuration list for PBXNativeTarget "BitPandaUnitTests" */;
+			buildPhases = (
+				0531F15725D86ED300D571B9 /* Sources */,
+				0531F15825D86ED300D571B9 /* Frameworks */,
+				0531F15925D86ED300D571B9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0531F16125D86ED400D571B9 /* PBXTargetDependency */,
+			);
+			name = BitPandaUnitTests;
+			productName = BitPandaUnitTests;
+			productReference = 0531F15B25D86ED300D571B9 /* BitPandaUnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -279,6 +335,10 @@
 				TargetAttributes = {
 					0517A40B25D549000012482D = {
 						CreatedOnToolsVersion = 12.2;
+					};
+					0531F15A25D86ED300D571B9 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = 0517A40B25D549000012482D;
 					};
 				};
 			};
@@ -296,6 +356,7 @@
 			projectRoot = "";
 			targets = (
 				0517A40B25D549000012482D /* BitPandaTest */,
+				0531F15A25D86ED300D571B9 /* BitPandaUnitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -309,6 +370,13 @@
 				0517A42625D549800012482D /* Masterdata.json in Resources */,
 				056A0F7025D7BEA000303D30 /* Readme.md in Resources */,
 				0517A41925D549020012482D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0531F15925D86ED300D571B9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,6 +434,7 @@
 				0517A41425D549000012482D /* MainViewController.swift in Sources */,
 				0517A41025D549000012482D /* AppDelegate.swift in Sources */,
 				0517A44525D54E510012482D /* AssetGroupName.swift in Sources */,
+				0531F15525D85CDC00D571B9 /* UIImage+Badge.swift in Sources */,
 				059C700025D6BB51008EBD6B /* WalletAttributes.swift in Sources */,
 				0517A41225D549000012482D /* SceneDelegate.swift in Sources */,
 				050303ED25D6CECD008691E0 /* LogoDictionary.swift in Sources */,
@@ -391,7 +460,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0531F15725D86ED300D571B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0531F16C25D86F0A00D571B9 /* CoordinatorTests.swift in Sources */,
+				0531F16825D86F0000D571B9 /* SampleDataTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0531F16125D86ED400D571B9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0517A40B25D549000012482D /* BitPandaTest */;
+			targetProxy = 0531F16025D86ED400D571B9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		0517A41A25D549020012482D /* LaunchScreen.storyboard */ = {
@@ -561,6 +647,46 @@
 			};
 			name = Release;
 		};
+		0531F16325D86ED400D571B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E4YL2MG9YD;
+				INFOPLIST_FILE = BitPandaUnitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bitpanda.BitPandaUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BitPandaTest.app/BitPandaTest";
+			};
+			name = Debug;
+		};
+		0531F16425D86ED400D571B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E4YL2MG9YD;
+				INFOPLIST_FILE = BitPandaUnitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bitpanda.BitPandaUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BitPandaTest.app/BitPandaTest";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -578,6 +704,15 @@
 			buildConfigurations = (
 				0517A42125D549020012482D /* Debug */,
 				0517A42225D549020012482D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0531F16225D86ED400D571B9 /* Build configuration list for PBXNativeTarget "BitPandaUnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0531F16325D86ED400D571B9 /* Debug */,
+				0531F16425D86ED400D571B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -31,7 +31,7 @@ class MainCoordinator {
         return AssetViewModel(
             cryptocoins: self.masterData?.data?.attributes?.cryptocoins as? [AssetItem] ?? [],
             commodities: self.masterData?.data?.attributes?.commodities as? [AssetItem] ?? [],
-            fiats: self.masterData?.data?.attributes?.fiats as? [AssetItem] ?? [])
+            fiats: self.masterData?.data?.attributes?.fiats?.filter({$0?.attributes?.hasWallets ?? false}) as? [AssetItem] ?? [])
     }
     func provideWalletsViewModel() -> WalletViewModel{
         let wallets = (self.masterData?.data?.attributes?.wallets?.filter({$0?.attributes?.deleted == false}) as? [WalletItem] ?? []).sorted(by: { (a, b) -> Bool in

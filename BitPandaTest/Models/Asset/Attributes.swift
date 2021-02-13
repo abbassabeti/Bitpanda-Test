@@ -115,3 +115,11 @@ struct Attributes: Codable {
         //case family
     }
 }
+
+extension Attributes : Equatable {
+    static func == (lhs: Attributes, rhs: Attributes) -> Bool {
+        return lhs.symbol == rhs.symbol &&
+            lhs.name == rhs.name &&
+            lhs.hasWallets == rhs.hasWallets
+    }
+}

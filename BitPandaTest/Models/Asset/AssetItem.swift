@@ -27,3 +27,11 @@ struct AssetItem : Codable {
     }
 
 }
+
+extension AssetItem : Equatable {
+    static func == (lhs: AssetItem, rhs: AssetItem) -> Bool {
+        return lhs.attributes == rhs.attributes &&
+            lhs.id == rhs.id &&
+            lhs.type == rhs.type
+    }
+}

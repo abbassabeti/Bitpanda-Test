@@ -18,7 +18,7 @@ class AssetViewModel {
     init(cryptocoins: [AssetItem],commodities: [AssetItem],fiats:[AssetItem]){
         self.cryptoCoins = cryptocoins
         self.commodities = commodities
-        self.fiats = fiats.filter({$0.attributes?.hasWallets ?? false})
+        self.fiats = fiats
         self.type = .All
     }
     

@@ -27,3 +27,11 @@ struct WalletItem : Codable {
     }
 
 }
+
+extension WalletItem : Equatable {
+    static func == (lhs: WalletItem, rhs: WalletItem) -> Bool {
+        return lhs.attributes == rhs.attributes &&
+            lhs.id == rhs.id &&
+            lhs.type == rhs.type
+    }
+}
