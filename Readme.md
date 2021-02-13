@@ -8,10 +8,13 @@ This is a take-home challenge written by Abbas SabetiNezhad. There is a hard cor
 
 This App uses:
 
-        - ![Tabman](https://github.com/uias/Tabman) : for showing two different screens on tabs
-        - ![Floaty](https://github.com/kciter/Floaty) : for adding a floating action button with filters functionality
-        - ![Kingfisher](https://github.com/onevcat/Kingfisher) : for loading images from urls
-        - ![PocketSVG](https://github.com/pocketsvg/PocketSVG) : for processor of downloaded SVGs
+- ![Tabman](https://github.com/uias/Tabman) : for showing two different screens on tabs
+
+- ![Floaty](https://github.com/kciter/Floaty) : for adding a floating action button with filters functionality
+
+- ![Kingfisher](https://github.com/onevcat/Kingfisher) : for loading images from urls
+
+- ![PocketSVG](https://github.com/pocketsvg/PocketSVG) : for processor of downloaded SVGs
         
 To find out more about how to run the app, see Installation instructions below.
 
