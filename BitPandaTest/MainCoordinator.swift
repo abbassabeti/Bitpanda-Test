@@ -17,7 +17,6 @@ class MainCoordinator {
         if let url = Bundle.main.url(forResource: "Masterdata", withExtension: "json") {
             do {
                 let data = try Data(contentsOf: url)
-                print("data is \(String(decoding: data, as: UTF8.self))")
                 let decoder = JSONDecoder()
                 let jsonData = try decoder.decode(MasterData.self, from: data)
                 self.masterData = jsonData

@@ -20,7 +20,6 @@ class WalletCell : UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupView()
-        
     }
     
     required init?(coder: NSCoder) {
@@ -36,7 +35,7 @@ class WalletCell : UITableViewCell {
     }
     
     func setupView(){
-        defaultItemColor = (traitCollection.userInterfaceStyle == .dark) ? .green : .purple
+        defaultItemColor = (traitCollection.userInterfaceStyle == .dark) ? .green : .blue
         let imgView = UIImageView()
         let nameLbl = UILabel()
         let priceLbl = UILabel()
@@ -139,8 +138,9 @@ class WalletCell : UITableViewCell {
         guard let rawPrice = item.attributes?.balance else {return ""}
         let number = NSNumber(value: rawPrice)
         formatter.currencyCode = item.attributes?.cryptocoinSymbol
-        formatter.locale = Locale.current
-        formatter.currencySymbol = Locale.current.currencySymbol//item.attributes?.symbol
+        let locale = Locale.getPreferredLocale()
+        formatter.locale = locale
+        formatter.currencySymbol = locale.currencySymbol
         formatter.numberStyle = .currency
         return formatter.string(from: number) ?? ""
     }
@@ -150,8 +150,9 @@ class WalletCell : UITableViewCell {
         guard let rawPrice = item.attributes?.balance else {return ""}
         let number = NSNumber(value: rawPrice)
         formatter.currencyCode = item.attributes?.fiatSymbol
-        formatter.locale = Locale.current
-        formatter.currencySymbol = Locale.current.currencySymbol//item.attributes?.symbol
+        let locale = Locale.getPreferredLocale()
+        formatter.locale = locale
+        formatter.currencySymbol = locale.currencySymbol
         formatter.numberStyle = .currency
         return formatter.string(from: number) ?? ""
     }

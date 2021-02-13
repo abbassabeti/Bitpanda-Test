@@ -6,7 +6,6 @@ def shared_pods
   pod 'Floaty'
   pod 'Kingfisher'
   pod 'PocketSVG'
-  #pod 'SwiftSVG'
 end
 
 target 'BitPandaTest' do

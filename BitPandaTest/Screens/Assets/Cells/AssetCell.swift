@@ -104,8 +104,9 @@ class AssetCell : UITableViewCell {
         formatter.numberStyle = .decimal
         guard let number = formatter.number(from: rawPrice) else {return ""}
         formatter.currencyCode = item.attributes?.symbol
-        formatter.locale = Locale.current
-        formatter.currencySymbol = Locale.current.currencySymbol//item.attributes?.symbol
+        let locale = Locale.getPreferredLocale()
+        formatter.locale = locale
+        formatter.currencySymbol = locale.currencySymbol//item.attributes?.symbol
         formatter.numberStyle = .currency
         return formatter.string(from: number) ?? ""
     }

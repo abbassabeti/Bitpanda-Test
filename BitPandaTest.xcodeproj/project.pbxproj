@@ -26,6 +26,7 @@
 		0517A44925D554100012482D /* MasterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0517A44825D554100012482D /* MasterData.swift */; };
 		0517A44D25D555BC0012482D /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0517A44C25D555BC0012482D /* MainCoordinator.swift */; };
 		0517A45125D5571F0012482D /* WalletViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0517A45025D5571F0012482D /* WalletViewModel.swift */; };
+		056A0F7025D7BEA000303D30 /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 056A0F6F25D7BEA000303D30 /* Readme.md */; };
 		059C6FC925D56924008EBD6B /* WalletsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059C6FC825D56924008EBD6B /* WalletsViewController.swift */; };
 		059C6FD025D586C3008EBD6B /* AssetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059C6FCF25D586C3008EBD6B /* AssetCell.swift */; };
 		059C6FE325D692E6008EBD6B /* SVGProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059C6FE225D692E6008EBD6B /* SVGProcessor.swift */; };
@@ -36,6 +37,7 @@
 		059C700B25D6BBE8008EBD6B /* FiatWalletItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059C700A25D6BBE8008EBD6B /* FiatWalletItem.swift */; };
 		059C700E25D6BDC5008EBD6B /* WalletType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059C700D25D6BDC5008EBD6B /* WalletType.swift */; };
 		059C701225D6C0B3008EBD6B /* WalletCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059C701125D6C0B3008EBD6B /* WalletCell.swift */; };
+		05F2986625D7ABEE0049226B /* Locale+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F2986525D7ABEE0049226B /* Locale+Extension.swift */; };
 		F8FD8FF7FA0C0335E0765985 /* Pods_BitPandaTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ED9AD5ABA33D1256768131E /* Pods_BitPandaTest.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +63,7 @@
 		0517A44825D554100012482D /* MasterData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterData.swift; sourceTree = "<group>"; };
 		0517A44C25D555BC0012482D /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		0517A45025D5571F0012482D /* WalletViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewModel.swift; sourceTree = "<group>"; };
+		056A0F6F25D7BEA000303D30 /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
 		059C6FC825D56924008EBD6B /* WalletsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletsViewController.swift; sourceTree = "<group>"; };
 		059C6FCF25D586C3008EBD6B /* AssetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetCell.swift; sourceTree = "<group>"; };
 		059C6FE225D692E6008EBD6B /* SVGProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVGProcessor.swift; sourceTree = "<group>"; };
@@ -71,6 +74,7 @@
 		059C700A25D6BBE8008EBD6B /* FiatWalletItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiatWalletItem.swift; sourceTree = "<group>"; };
 		059C700D25D6BDC5008EBD6B /* WalletType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletType.swift; sourceTree = "<group>"; };
 		059C701125D6C0B3008EBD6B /* WalletCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletCell.swift; sourceTree = "<group>"; };
+		05F2986525D7ABEE0049226B /* Locale+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Locale+Extension.swift"; sourceTree = "<group>"; };
 		9ED9AD5ABA33D1256768131E /* Pods_BitPandaTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitPandaTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A773D658EDCA03C996E1B9DC /* Pods-BitPandaTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitPandaTest.release.xcconfig"; path = "Target Support Files/Pods-BitPandaTest/Pods-BitPandaTest.release.xcconfig"; sourceTree = "<group>"; };
 		EB684C37DAFA3FC76FC1A288 /* Pods-BitPandaTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitPandaTest.debug.xcconfig"; path = "Target Support Files/Pods-BitPandaTest/Pods-BitPandaTest.debug.xcconfig"; sourceTree = "<group>"; };
@@ -116,6 +120,7 @@
 		0517A40325D549000012482D = {
 			isa = PBXGroup;
 			children = (
+				056A0F6F25D7BEA000303D30 /* Readme.md */,
 				0517A40E25D549000012482D /* BitPandaTest */,
 				0517A40D25D549000012482D /* Products */,
 				1DC39A155FCF7428D83DC53A /* Pods */,
@@ -211,6 +216,7 @@
 			children = (
 				059C6FE225D692E6008EBD6B /* SVGProcessor.swift */,
 				059C6FEE25D6A53C008EBD6B /* SVGCacheSerializer.swift */,
+				05F2986525D7ABEE0049226B /* Locale+Extension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -301,6 +307,7 @@
 			files = (
 				0517A41C25D549020012482D /* LaunchScreen.storyboard in Resources */,
 				0517A42625D549800012482D /* Masterdata.json in Resources */,
+				056A0F7025D7BEA000303D30 /* Readme.md in Resources */,
 				0517A41925D549020012482D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -355,6 +362,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0517A43025D54A110012482D /* AssetViewModel.swift in Sources */,
+				05F2986625D7ABEE0049226B /* Locale+Extension.swift in Sources */,
 				0517A41425D549000012482D /* MainViewController.swift in Sources */,
 				0517A41025D549000012482D /* AppDelegate.swift in Sources */,
 				0517A44525D54E510012482D /* AssetGroupName.swift in Sources */,
