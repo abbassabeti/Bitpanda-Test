@@ -20,4 +20,8 @@ extension UIImage {
     func badgeIt() -> UIImage{
         return imageWith(newSize: CGSize(width: 25, height: 25))
     }
+    
+    func bigBadgeIt() -> UIImage{
+        return imageWith(newSize: CGSize(width: 40, height: 40))
+    }
 }

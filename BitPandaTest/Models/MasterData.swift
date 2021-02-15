@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - MasterData
-struct MasterData: Codable {
+class MasterData: Codable {
     let data: DataClass?
 }
 

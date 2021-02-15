@@ -14,13 +14,17 @@ class WalletViewModel {
     var fiatWallets : [FiatWalletItem]
     var logoDictionary : [String:LogoItem]
     var type : WalletType
+    var showSectionHeader : Bool = true
+    var showFloaty: Bool = true
 
-    init(wallets: [WalletItem],commodityWallets: [WalletItem],fiatWallets:[FiatWalletItem],logoDic: [String:LogoItem]){
+    init(wallets: [WalletItem],commodityWallets: [WalletItem],fiatWallets:[FiatWalletItem],logoDic: [String:LogoItem],type: WalletType = .All,showFloaty: Bool = true,showSectionHeader: Bool = true){
         self.wallets = wallets
         self.commodityWallets = commodityWallets
         self.fiatWallets = fiatWallets
         self.logoDictionary = logoDic
-        self.type = .All
+        self.type = type
+        self.showFloaty = showFloaty
+        self.showSectionHeader = showSectionHeader
     }
     
     func getCorrespondingGroup(type: WalletType? = nil) -> [Any]{

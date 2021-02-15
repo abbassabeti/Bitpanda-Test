@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let window = UIWindow(frame: UIScreen.main.bounds)
         
-        let viewController = MainViewController()
+        let viewController = MainTabController()
         viewController.view.frame = UIScreen.main.bounds
         let coordinator = MainCoordinator()
         viewController.setCoordinator(coordinator: coordinator)

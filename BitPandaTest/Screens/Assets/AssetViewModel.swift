@@ -12,14 +12,17 @@ class AssetViewModel {
     var cryptoCoins : [AssetItem]
     var commodities : [AssetItem]
     var fiats : [AssetItem]
-    
     var type : AssetType
-    
-    init(cryptocoins: [AssetItem],commodities: [AssetItem],fiats:[AssetItem]){
+    var showSectionHeader : Bool = true
+    var showFloaty: Bool = true
+
+    init(cryptocoins: [AssetItem],commodities: [AssetItem],fiats:[AssetItem],type: AssetType = .All,showSectionHeader: Bool = true,showFloaty: Bool = true){
         self.cryptoCoins = cryptocoins
         self.commodities = commodities
         self.fiats = fiats
-        self.type = .All
+        self.type = type
+        self.showSectionHeader = showSectionHeader
+        self.showFloaty = showFloaty
     }
     
     func getCorrespondingGroup(type: AssetType? = nil) -> [AssetItem]{

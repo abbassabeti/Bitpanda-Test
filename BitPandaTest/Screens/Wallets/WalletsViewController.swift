@@ -25,7 +25,9 @@ class WalletsViewController : UIViewController {
     
     func setupView(){
         configTableView()
-        setupFloaty()
+        if (viewModel?.showFloaty ?? true){
+            setupFloaty()
+        }
     }
     
     func reloadTableView(){
@@ -35,41 +37,41 @@ class WalletsViewController : UIViewController {
     
     func setupFloaty(){
         let floaty = Floaty()
-        floaty.addItem("Wallets",icon: UIImage(named:"coin")) {[weak self] (_) in
+        floaty.addItem("Wallets",icon: coinImage) {[weak self] (_) in
             guard let self = self else {return}
             guard self.viewModel?.type != .Wallet else {return}
             self.viewModel?.type = .Wallet
-            floaty.buttonImage = UIImage(named: "coin")?.badgeIt()
+            floaty.buttonImage = self.coinImage
             self.reloadTableView()
         }
-        floaty.addItem("Commodity Wallets",icon: UIImage(named:"commodity")) {[weak self] (_) in
+        floaty.addItem("Commodity Wallets",icon: commodityImage) {[weak self] (_) in
             guard let self = self else {return}
             guard self.viewModel?.type != .CommodityWallet else {return}
             self.viewModel?.type = .CommodityWallet
-            floaty.buttonImage = UIImage(named: "commodity")?.badgeIt()
+            floaty.buttonImage = self.commodityImage
             self.reloadTableView()
         }
-        floaty.addItem("Fiat Wallets",icon: UIImage(named:"fiat")) {[weak self] (_) in
+        floaty.addItem("Fiat Wallets",icon: fiatImage) {[weak self] (_) in
             guard let self = self else {return}
             guard self.viewModel?.type != .FiatWallet else {return}
             self.viewModel?.type = .FiatWallet
-            floaty.buttonImage = UIImage(named: "fiat")?.badgeIt()
+            floaty.buttonImage = self.fiatImage
             self.reloadTableView()
         }
-        floaty.addItem("Show All",icon: UIImage(named:"clear")) {[weak self] (_) in
+        floaty.addItem("Show All",icon: clearImage) {[weak self] (_) in
             guard let self = self else {return}
             guard self.viewModel?.type != .All else {return}
             self.viewModel?.type = .All
-            floaty.buttonImage = UIImage(named: "filter")?.badgeIt()
+            floaty.buttonImage = self.filterImage
             self.reloadTableView()
         }
         floaty.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(floaty)
-        floaty.buttonImage = UIImage(named: "filter")?.badgeIt()
+        floaty.buttonImage = filterImage
         floaty.rotationDegrees = 20
         self.floatyView = floaty
         NSLayoutConstraint.activate([
-            floaty.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -40),
+            floaty.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -130),
             floaty.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -40),
             floaty.widthAnchor.constraint(equalToConstant: 45),
             floaty.heightAnchor.constraint(equalToConstant: 45)
@@ -164,6 +166,7 @@ extension WalletsViewController : UITableViewDelegate,UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        guard viewModel?.showSectionHeader != false else {return nil}
         switch viewModel?.type {
             case .All:
                 switch section {
@@ -185,5 +188,25 @@ extension WalletsViewController : UITableViewDelegate,UITableViewDataSource{
             default:
                 return ""
         }
+    }
+}
+
+extension WalletsViewController {
+    var coinImage : UIImage? {
+        return UIImage(named:"coin")?.bigBadgeIt()
+    }
+    var commodityImage : UIImage? {
+        return UIImage(named:"commodity")?.bigBadgeIt()
+    }
+    var fiatImage : UIImage? {
+        return UIImage(named: "fiat")?.bigBadgeIt()
+    }
+    
+    var clearImage : UIImage? {
+        return UIImage(named: "clear")?.badgeIt()
+    }
+    
+    var filterImage : UIImage? {
+        return UIImage(named: "filter")?.badgeIt()
     }
 }

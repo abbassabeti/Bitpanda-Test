@@ -12,4 +12,17 @@ enum AssetType : String, Codable{
     case Commodity = "commodity"
     case Fiat = "fiat"
     case All = "all"
+    
+    func getTitleName() -> String{
+        switch self {
+            case .Cryptocoin:
+                return "Cryptocoins"
+            case .Commodity:
+                return "Commodities"
+            case .Fiat:
+                return "Fiats"
+            default:
+                return "All"
+        }
+    }
 }

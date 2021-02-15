@@ -9,25 +9,23 @@ import UIKit
 import Tabman
 import Pageboy
 
-class MainViewController: TabmanViewController {
+class TabsViewController: TabmanViewController {
     
     private var viewControllers : [UIViewController] = []
-    private var coordinator : MainCoordinator? = nil{
-        didSet{
-            guard let coordinator = coordinator else {return}
-            self.viewControllers = [coordinator.provideAssetViewController(),
-                                    coordinator.provideWalletViewController()]
-            self.dataSource = self
-        }
+    private var vcNames: [String] = []
+
+    
+    func setViewControllers(vcs:[UIViewController]){
+        self.viewControllers = vcs
+        self.dataSource = self
     }
     
-    func setCoordinator(coordinator : MainCoordinator) {
-        self.coordinator = coordinator
+    func setVCNames(names: [String]){
+        self.vcNames = names
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //view.backgroundColor = .white
         self.dataSource = self
         addTopBar()
     }
@@ -40,12 +38,15 @@ class MainViewController: TabmanViewController {
             case .dark:
                 bar.buttons.customize{ (btn) in
                     btn.selectedTintColor = bar.indicator.tintColor
-                    btn.tintColor = .white
+                    btn.tintColor = .gray
+                    btn.selectedTintColor = .white
+                    //btn.font = .systemFont(ofSize: 10)
                 }
             default:
                 bar.buttons.customize{ (btn) in
                     btn.selectedTintColor = bar.indicator.tintColor
                     btn.tintColor = .gray
+                    //btn.font = .systemFont(ofSize: 10)
                 }
         }
         addBar(bar.systemBar(), dataSource: self, at: .top)
@@ -53,7 +54,7 @@ class MainViewController: TabmanViewController {
     }
 }
 
-extension MainViewController: PageboyViewControllerDataSource, TMBarDataSource {
+extension TabsViewController: PageboyViewControllerDataSource, TMBarDataSource {
 
     func numberOfViewControllers(in pageboyViewController: PageboyViewController) -> Int {
         return viewControllers.count
@@ -69,12 +70,8 @@ extension MainViewController: PageboyViewControllerDataSource, TMBarDataSource {
     }
 
     func barItem(for bar: TMBar, at index: Int) -> TMBarItemable {
-        switch index {
-            case 0:
-                return TMBarItem(title: "Assets")
-            default:
-                return TMBarItem(title: "Wallets")
-        }
+        guard vcNames.count > index else {return TMBarItem(title:"Tab\(index)")}
+        return TMBarItem(title: vcNames[index])
     }
 }
 

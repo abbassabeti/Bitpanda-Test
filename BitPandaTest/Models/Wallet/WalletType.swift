@@ -12,4 +12,17 @@ enum WalletType : String, Codable{
     case CommodityWallet = "commodity_wallet"
     case FiatWallet = "fiat_wallet"
     case All = "all"
+    
+    func getTitleName() -> String{
+        switch self {
+            case .Wallet:
+                return "Wallets"
+            case .CommodityWallet:
+                return "Commodity Wallets"
+            case .FiatWallet:
+                return "Fiat Wallets"
+            default:
+                return "All"
+        }
+    }
 }
