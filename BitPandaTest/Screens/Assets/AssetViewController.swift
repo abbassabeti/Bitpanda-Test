@@ -37,28 +37,28 @@ class AssetViewController : UIViewController {
     
     func setupFloaty(){
         let floaty = Floaty()
-        floaty.addItem("Cryptocoins",icon: coinImage) {[weak self] (_) in
+        floaty.addItem(LocalizedString("cryptocoins_name"),icon: coinImage) {[weak self] (_) in
             guard let self = self else {return}
             guard self.viewModel?.type != .Cryptocoin else {return}
             self.viewModel?.type = .Cryptocoin
             floaty.buttonImage = self.coinImage
             self.reloadTableView()
         }
-        floaty.addItem("Commodities",icon: commodityImage) {[weak self] (_) in
+        floaty.addItem(LocalizedString("commodities_name"),icon: commodityImage) {[weak self] (_) in
             guard let self = self else {return}
             guard self.viewModel?.type != .Commodity else {return}
             self.viewModel?.type = .Commodity
             floaty.buttonImage = self.commodityImage
             self.reloadTableView()
         }
-        floaty.addItem("Fiats",icon: fiatImage) {[weak self] (_) in
+        floaty.addItem(LocalizedString("fiats_name"),icon: fiatImage) {[weak self] (_) in
             guard let self = self else {return}
             guard self.viewModel?.type != .Fiat else {return}
             self.viewModel?.type = .Fiat
             floaty.buttonImage = self.fiatImage
             self.reloadTableView()
         }
-        floaty.addItem("Show All",icon: self.clearImage) {[weak self] (_) in
+        floaty.addItem(LocalizedString("show_all"),icon: self.clearImage) {[weak self] (_) in
             guard let self = self else {return}
             guard self.viewModel?.type != .All else {return}
             self.viewModel?.type = .All
@@ -166,20 +166,20 @@ extension AssetViewController : UITableViewDelegate,UITableViewDataSource{
             case .All:
                 switch section {
                 case 0:
-                    return "Cryptocoins"
+                    return LocalizedString("cryptocoins_name")
                 case 1:
-                    return "Commodities"
+                    return LocalizedString("commodities_name")
                 case 2:
-                    return "Fiats"
+                    return LocalizedString("fiats_name")
                 default:
                     return ""
                 }
             case .Cryptocoin:
-                return "Cryptocoins"
+                return LocalizedString("cryptocoins_name")
             case .Commodity:
-                return "Commodities"
+                return LocalizedString("commodities_name")
             case .Fiat:
-                return "Fiats"
+                return LocalizedString("fiats_name")
             default:
                 return ""
         }

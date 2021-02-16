@@ -41,6 +41,8 @@
 		059C700E25D6BDC5008EBD6B /* WalletType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059C700D25D6BDC5008EBD6B /* WalletType.swift */; };
 		059C701225D6C0B3008EBD6B /* WalletCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059C701125D6C0B3008EBD6B /* WalletCell.swift */; };
 		05A8C90E25DACB6000ACDAEC /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A8C90D25DACB6000ACDAEC /* MainTabController.swift */; };
+		05D400AB25DC583700F7A049 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 05D400AD25DC583700F7A049 /* Localizable.strings */; };
+		05D400B125DC5B5400F7A049 /* NSLocalizedString+init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D400B025DC5B5400F7A049 /* NSLocalizedString+init.swift */; };
 		05F2986625D7ABEE0049226B /* Locale+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F2986525D7ABEE0049226B /* Locale+Extension.swift */; };
 		F8FD8FF7FA0C0335E0765985 /* Pods_BitPandaTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ED9AD5ABA33D1256768131E /* Pods_BitPandaTest.framework */; };
 /* End PBXBuildFile section */
@@ -63,7 +65,6 @@
 		0517A41125D549000012482D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		0517A41325D549000012482D /* TabsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsViewController.swift; sourceTree = "<group>"; };
 		0517A41825D549020012482D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		0517A41B25D549020012482D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0517A41D25D549020012482D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0517A42525D549800012482D /* Masterdata.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Masterdata.json; sourceTree = "<group>"; };
 		0517A42C25D549D00012482D /* AssetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +95,9 @@
 		059C700D25D6BDC5008EBD6B /* WalletType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletType.swift; sourceTree = "<group>"; };
 		059C701125D6C0B3008EBD6B /* WalletCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletCell.swift; sourceTree = "<group>"; };
 		05A8C90D25DACB6000ACDAEC /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
+		05D400AC25DC583700F7A049 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		05D400B025DC5B5400F7A049 /* NSLocalizedString+init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLocalizedString+init.swift"; sourceTree = "<group>"; };
+		05D400B425DC5D5700F7A049 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		05F2986525D7ABEE0049226B /* Locale+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Locale+Extension.swift"; sourceTree = "<group>"; };
 		9ED9AD5ABA33D1256768131E /* Pods_BitPandaTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitPandaTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A773D658EDCA03C996E1B9DC /* Pods-BitPandaTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitPandaTest.release.xcconfig"; path = "Target Support Files/Pods-BitPandaTest/Pods-BitPandaTest.release.xcconfig"; sourceTree = "<group>"; };
@@ -188,6 +192,7 @@
 			children = (
 				0517A41825D549020012482D /* Assets.xcassets */,
 				0517A42525D549800012482D /* Masterdata.json */,
+				05D400AD25DC583700F7A049 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -258,6 +263,7 @@
 				059C6FEE25D6A53C008EBD6B /* SVGCacheSerializer.swift */,
 				05F2986525D7ABEE0049226B /* Locale+Extension.swift */,
 				0531F15425D85CDC00D571B9 /* UIImage+Badge.swift */,
+				05D400B025DC5B5400F7A049 /* NSLocalizedString+init.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -351,7 +357,6 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
 			);
 			mainGroup = 0517A40325D549000012482D;
 			productRefGroup = 0517A40D25D549000012482D /* Products */;
@@ -372,6 +377,7 @@
 				0517A41C25D549020012482D /* LaunchScreen.storyboard in Resources */,
 				0517A42625D549800012482D /* Masterdata.json in Resources */,
 				056A0F7025D7BEA000303D30 /* Readme.md in Resources */,
+				05D400AB25DC583700F7A049 /* Localizable.strings in Resources */,
 				0517A41925D549020012482D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -451,6 +457,7 @@
 				059C6FE325D692E6008EBD6B /* SVGProcessor.swift in Sources */,
 				059C6FD025D586C3008EBD6B /* AssetCell.swift in Sources */,
 				0517A44925D554100012482D /* MasterData.swift in Sources */,
+				05D400B125DC5B5400F7A049 /* NSLocalizedString+init.swift in Sources */,
 				0517A44D25D555BC0012482D /* MainCoordinator.swift in Sources */,
 				059C700825D6BBCF008EBD6B /* WalletItem.swift in Sources */,
 				0517A43F25D54D420012482D /* Attributes.swift in Sources */,
@@ -487,9 +494,17 @@
 		0517A41A25D549020012482D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				0517A41B25D549020012482D /* Base */,
+				05D400B425DC5D5700F7A049 /* en */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		05D400AD25DC583700F7A049 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				05D400AC25DC583700F7A049 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

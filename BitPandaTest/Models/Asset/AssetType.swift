@@ -16,13 +16,13 @@ enum AssetType : String, Codable{
     func getTitleName() -> String{
         switch self {
             case .Cryptocoin:
-                return "Cryptocoins"
+                return LocalizedString("cryptocoins_name")
             case .Commodity:
-                return "Commodities"
+                return LocalizedString("commodities_name")
             case .Fiat:
-                return "Fiats"
+                return LocalizedString("fiats_name")
             default:
-                return "All"
+                return LocalizedString("all_name")
         }
     }
 }

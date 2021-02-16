@@ -144,7 +144,8 @@ class MainCoordinator {
     }
     
     func provideOverallViewControllerNames() -> [String] {
-        return ["Asset","Wallet"]
+        return [LocalizedString("asset_tab"),
+                LocalizedString("wallet_tab")]
     }
     
     func provideAssetsTabViewController() -> TabsViewController {
@@ -156,7 +157,8 @@ class MainCoordinator {
         let imgSize = CGSize(width: 25, height: 25)
         let assetImg = UIImage(named: "coin-def")?.imageWith(newSize: imgSize)
         let assetFilledImg = UIImage(named: "coin-filled")?.imageWith(newSize: imgSize)
-        assetsVC.tabBarItem = UITabBarItem(title: "Assets", image: assetImg, selectedImage: assetFilledImg)
+        let tabName = LocalizedString("asset_tab")
+        assetsVC.tabBarItem = UITabBarItem(title: tabName, image: assetImg, selectedImage: assetFilledImg)
         
         return assetsVC
     }
@@ -170,7 +172,8 @@ class MainCoordinator {
         let imgSize = CGSize(width: 25, height: 25)
         let assetImg = UIImage(named: "wallet-def")?.imageWith(newSize: imgSize)
         let assetFilledImg = UIImage(named: "wallet-filled")?.imageWith(newSize: imgSize)
-        walletsVC.tabBarItem = UITabBarItem(title: "Wallets", image: assetImg, selectedImage: assetFilledImg)
+        let tabName = LocalizedString("wallet_tab")
+        walletsVC.tabBarItem = UITabBarItem(title: tabName, image: assetImg, selectedImage: assetFilledImg)
         
         return walletsVC
     }
@@ -182,9 +185,11 @@ class MainCoordinator {
         overallVC.setViewControllers(vcs: overallVCItems)
         
         let imgSize = CGSize(width: 25, height: 23)
-        let assetImg = UIImage(systemName: "circle.grid.2x2")?.imageWith(newSize: imgSize)
-        let assetFilledImg = UIImage(named: "circle.grid.2x2.fill")?.imageWith(newSize: imgSize)
-        overallVC.tabBarItem = UITabBarItem(title: "Overall", image: assetImg, selectedImage: assetFilledImg)
+        let bigImgSize = CGSize(width: 30,height: 27)
+        let assetImg = UIImage(systemName: "circle.grid.2x2")?.imageWith(newSize: imgSize).image(alpha:0.5)
+        let assetFilledImg = UIImage(systemName: "circle.grid.2x2.fill")?.imageWith(newSize: bigImgSize).image(alpha:0.5)
+        let tabName = LocalizedString("overall_tab")
+        overallVC.tabBarItem = UITabBarItem(title: tabName, image: assetImg, selectedImage: assetFilledImg)
         
         return overallVC
     }

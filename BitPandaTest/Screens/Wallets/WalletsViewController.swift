@@ -37,28 +37,28 @@ class WalletsViewController : UIViewController {
     
     func setupFloaty(){
         let floaty = Floaty()
-        floaty.addItem("Wallets",icon: coinImage) {[weak self] (_) in
+        floaty.addItem(LocalizedString("wallets_name"),icon: coinImage) {[weak self] (_) in
             guard let self = self else {return}
             guard self.viewModel?.type != .Wallet else {return}
             self.viewModel?.type = .Wallet
             floaty.buttonImage = self.coinImage
             self.reloadTableView()
         }
-        floaty.addItem("Commodity Wallets",icon: commodityImage) {[weak self] (_) in
+        floaty.addItem(LocalizedString("complete_commodity_wallets_name"),icon: commodityImage) {[weak self] (_) in
             guard let self = self else {return}
             guard self.viewModel?.type != .CommodityWallet else {return}
             self.viewModel?.type = .CommodityWallet
             floaty.buttonImage = self.commodityImage
             self.reloadTableView()
         }
-        floaty.addItem("Fiat Wallets",icon: fiatImage) {[weak self] (_) in
+        floaty.addItem(LocalizedString("complete_fiat_wallets_name"),icon: fiatImage) {[weak self] (_) in
             guard let self = self else {return}
             guard self.viewModel?.type != .FiatWallet else {return}
             self.viewModel?.type = .FiatWallet
             floaty.buttonImage = self.fiatImage
             self.reloadTableView()
         }
-        floaty.addItem("Show All",icon: clearImage) {[weak self] (_) in
+        floaty.addItem(LocalizedString("show_all"),icon: clearImage) {[weak self] (_) in
             guard let self = self else {return}
             guard self.viewModel?.type != .All else {return}
             self.viewModel?.type = .All
@@ -171,20 +171,20 @@ extension WalletsViewController : UITableViewDelegate,UITableViewDataSource{
             case .All:
                 switch section {
                 case 0:
-                    return "Wallets"
+                    return LocalizedString("wallets_name")
                 case 1:
-                    return "Commodity Wallets"
+                    return LocalizedString("commodity_wallets_name")
                 case 2:
-                    return "Fiat Wallets"
+                    return LocalizedString("fiat_wallets_name")
                 default:
                     return ""
                 }
             case .Wallet:
-                return "Wallets"
+                return LocalizedString("wallets_name")
             case .CommodityWallet:
-                return "Commodity Wallets"
+                return LocalizedString("commodity_wallets_name")
             case .FiatWallet:
-                return "Fiat Wallets"
+                return LocalizedString("fiat_wallets_name")
             default:
                 return ""
         }

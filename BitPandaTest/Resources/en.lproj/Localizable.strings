@@ -1,0 +1,21 @@
+/* 
+  Base.strings
+  BitPandaTest
+
+  Created by Abbas on 2/16/21.
+*/
+
+"wallets_name" = "Wallets";
+"commodity_wallets_name" = "Commodity W.";
+"fiat_wallets_name" = "Fiat W.";
+"all_name" = "All";
+"cryptocoins_name" = "Cryptocoins";
+"commodities_name" = "Commodities";
+"fiats_name" = "Fiats";
+"asset_tab" = "Asset";
+"wallet_tab" = "Wallet";
+"overall_tab" = "Overall";
+"complete_wallets_name" = "Wallets";
+"complete_commodity_wallets_name" = "Commodity Wallets";
+"complete_fiat_wallets_name" = "Fiat Wallets";
+"show_all" = "Show All";
