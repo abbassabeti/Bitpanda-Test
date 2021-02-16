@@ -42,6 +42,8 @@ The last one is a suggestion of different grouped way of showing all Assets in a
 
 This app also supports dark mode and there are some animations implemented for the changes in the screens (see filters button in the overall tab and also updates of the tableView cells).
 
+I also have written some UnitTests for the logic parts of the app which is available under a sub project, named BitPandaUnitTests in the main project.
+
 ## Author
 
 Abbas SabetiNezhad, abbassabetinejad@gmail.com
