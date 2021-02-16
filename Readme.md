@@ -3,11 +3,11 @@
 This is a take-home challenge written by Abbas SabetiNezhad. There is a hard corded data as a .json file in the source and all interpreted data comes from there. To Find out more, read on.
 
 
-[screenshot1](https://github.com/abbassabeti/Bitpanda-Test/blob/images/images/scr01.PNG " ")
+![screenshot1](https://github.com/abbassabeti/Bitpanda-Test/blob/images/images/scr01.PNG " ")
 [screenshot2](https://github.com/abbassabeti/Bitpanda-Test/blob/images/images/scr02.PNG " ")
 [screenshot3](https://github.com/abbassabeti/Bitpanda-Test/blob/images/images/scr03.PNG " ")
 
-[screenshot4](https://github.com/abbassabeti/Bitpanda-Test/blob/images/images/scr04.PNG " ")
+![screenshot4](https://github.com/abbassabeti/Bitpanda-Test/blob/images/images/scr04.PNG " ")
 [screenshot5](https://github.com/abbassabeti/Bitpanda-Test/blob/images/images/scr05.PNG " ")
 [screenshot6](https://github.com/abbassabeti/Bitpanda-Test/blob/images/images/scr06.PNG " ")
 
