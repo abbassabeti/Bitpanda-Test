@@ -3,13 +3,9 @@
 This is a take-home challenge written by Abbas SabetiNezhad. There is a hard corded data as a .json file in the source and all interpreted data comes from there. To Find out more, read on.
 
 
-![screenshot1](https://github.com/abbassabeti/Bitpanda-Test/blob/images/images/scr01.PNG " ")
-[screenshot2](https://github.com/abbassabeti/Bitpanda-Test/blob/images/images/scr02.PNG " ")
-[screenshot3](https://github.com/abbassabeti/Bitpanda-Test/blob/images/images/scr03.PNG " ")
+![screenshot1](https://github.com/abbassabeti/Bitpanda-Test/blob/images/images/scr01.PNG " ") ![screenshot2](https://github.com/abbassabeti/Bitpanda-Test/blob/images/images/scr02.PNG " ") ![screenshot3](https://github.com/abbassabeti/Bitpanda-Test/blob/images/images/scr03.PNG " ")
 
-![screenshot4](https://github.com/abbassabeti/Bitpanda-Test/blob/images/images/scr04.PNG " ")
-[screenshot5](https://github.com/abbassabeti/Bitpanda-Test/blob/images/images/scr05.PNG " ")
-[screenshot6](https://github.com/abbassabeti/Bitpanda-Test/blob/images/images/scr06.PNG " ")
+![screenshot4](https://github.com/abbassabeti/Bitpanda-Test/blob/images/images/scr04.PNG " ") ![screenshot5](https://github.com/abbassabeti/Bitpanda-Test/blob/images/images/scr05.PNG " ") ![screenshot6](https://github.com/abbassabeti/Bitpanda-Test/blob/images/images/scr06.PNG " ")
 
 ## Depedencies
 
@@ -43,6 +39,8 @@ And Finally, run the app. As it can be seen from the above screenshots, there ar
  - Overall
     
 The last one is a suggestion of different grouped way of showing all Assets in a single Screen and Another screen for showing wallets in their corresponding groups. In all Tabs the default wallets are shown with a  different color for image border and font. Also, in overall Tabs, different types of Assets and Wallets are grouped using section headers. You can also apply filters on each list with just tapping the blue button at the bottom of pages and select one the filters.
+
+This app also supports dark mode and there are some animations implemented for the changes in the screens (see filters button in the overall tab and also updates of the tableView cells).
 
 ## Author
 
